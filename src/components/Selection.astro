@@ -1,0 +1,32 @@
+---
+interface Props {
+	
+	image: string;
+	time: string;
+	
+}
+
+const { image, time } = Astro.props;
+
+---
+
+<div class="md:w-[45%] sm:w-[45%] lg:w-[30%] h-full bg-white shadow-md rounded-md hover:shadow-lg">
+    <div class="relative">
+        <img src={image} alt="" class=" rounded-md"/>
+        <span class="bg-blue text-white p-[2px] absolute right-2 top-2 rounded sm:flex lg:hidden md:hidden">En promo</span>
+    </div>
+    
+    <div class="py-4 px-2">
+        <p class="font-[400]">Maitriser le Graphisme avec photopea</p>
+        <hr class="h-[2px] w-full">
+        <div class=" flex justify-between py-2 items-center">
+           <span class="font-bold text-black text-sm ">{time}</span>
+           <span class="text-sm text-orange-600"><i class="ri-star-half-line"></i><i class="ri-star-half-line"></i><i class="ri-star-half-line"></i></span>
+        </div>
+        <div class=" flex justify-between py-2 items-center">
+           <span class="font-bold text-blue uppercase sm:hidden lg:flex md:flex">En promo</span>
+           <button class=" capitalize border font-[500] border-blue rounded p-1 hover:bg-blue text-blue hover:text-white">ça m'interesse</button>
+        </div>
+    </div>
+    
+</div>

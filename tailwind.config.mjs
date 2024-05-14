@@ -2,7 +2,31 @@
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {},
+		extend: {
+
+			colors:{
+				blue:"#114FEE",
+				secondary:"#19233c",
+				
+			  },
+			  fontFamily: {
+				monteserrat: ["Montserrat", "sans-serif"],
+				
+				
+			  },
+			  screens: {
+        
+                sm:"200px",
+				//320px
+				md: "764px",
+				// => @media (min-width: 768px) { ... }
+
+				lg: "1200px",
+		  
+			   
+				
+			  },
+		},
 	},
 	plugins: [],
 }

@@ -1,0 +1,58 @@
+---
+
+---
+<nav class="sm:hidden md:hidden lg:flex p-2 w-[90%] mx-auto flex justify-between items-center">
+    <a href="/"><img src="/logowhite.png" alt="" class=" h-14 object-cover"></a>
+    <ul class="flex gap-5 text-white font-[500]">
+        <li><a href="/" class=" hover:scale-125 transition ease-in duration-100 hover:text-blue">Cours</a></li>
+        <li><a href="/" class=" hover:scale-125 transition ease-in duration-100 hover:text-blue">Infopreneur</a></li>
+        <li><a href="/" class=" hover:scale-125 transition ease-in duration-100 hover:text-blue">Tech Room</a></li>
+        <li><a href="/" class=" hover:scale-125 transition ease-in duration-100 hover:text-blue">Formateur</a></li>
+        <li><a href="/" class=" hover:scale-125 transition ease-in duration-100 hover:text-blue">Contacter</a></li>
+        <li><a href="/" class=" hover:scale-125 transition ease-in duration-100 hover:text-blue">Blog</a></li>
+    </ul>
+    <div class="flex gap-2 items-center">
+        <a href="" class="text-white hover:scale-100 transition ease-in duration-100 hover:text-blue">Promouvoir</a>
+        <a href="" class=" bg-blue text-white p-2 rounded hover:bg-rose-500">Tableau de bord</a>
+    </div>
+    
+</nav> 
+<nav class="sm:flex md:flex lg:hidden items-center justify-between w-full p-1 border-b border-white relative">
+    <img  src="/menu.png" alt="" class="w-8 h-8 p-2" id="button">
+   
+    <a href=""><img src="/logowhite.png" alt="" class="w-[200px]  object-cover"></a>
+    <a href="" class="border border-white text-white p-2 rounded  hover:border-blue hover:bg-blue">Compte</a>
+    <div id="menu" class="w-full  absolute min-h-60 bg-white top-12 right-0 left-0 mt-1 transform -translate-y-[440px] transition ease-in-out duration-700 ">
+       
+        <ul class="flex flex-col gap-5 text-black font-[500] p-3 ">
+            <li><a href="/" class=" hover:bg-blue block hover:text-white transition ease-in duration-100 p-2">Cours</a></li>
+            <li><a href="/" class=" hover:bg-blue block hover:text-white transition ease-in duration-100 p-2">Infopreneur</a></li>
+            <li><a href="/" class=" hover:bg-blue block hover:text-white transition ease-in duration-100 p-2">Tech Room</a></li>
+            <li><a href="/" class=" hover:bg-blue block hover:text-white transition ease-in duration-100 p-2">Formateur</a></li>
+            <li><a href="/" class=" hover:bg-blue block hover:text-white transition ease-in duration-100 p-2">Contacter</a></li>
+            <li><a href="/" class=" hover:bg-blue block hover:text-white transition ease-in duration-100 p-2">Blog</a></li>
+        </ul>
+    </div>
+
+</nav>
+<script is:inline>
+    const button = document.getElementById('button');
+    
+    const menu =  document.getElementById('menu');
+
+    button.addEventListener('click', ()=>{
+        menu.classList.toggle('translate-y-[0]')
+        menu.classList.add('bg-blue')
+        
+        
+       if(menu.classList.contains('translate-y-[0]'))   {
+        button.setAttribute("src", "/cancel.png") 
+       }    
+       else{
+        button.setAttribute("src", "/menu.png") 
+       } 
+       
+
+    })
+    
+</script>

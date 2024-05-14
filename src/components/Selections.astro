@@ -1,0 +1,62 @@
+---
+import Selection from "./Selection.astro"
+const selections = [
+    {
+        id:0,
+        image:"/selection1.jpg",
+        time:"9H 7min",
+        minute:""
+    },
+    {
+        id:1,
+        image:"/selection8.png",
+        time:"22H",
+        minute:""
+    },
+    {
+        id:2,
+        image:"/selection7.jpg",
+        time:"12H 22min",
+        minute:""
+    },
+    {
+        id:3,
+        image:"/selection4.jpg",
+        time:"9H 7min",
+        minute:""
+    },
+    {
+        id:4,
+        image:"/selection3.jpg",
+        time:"15H 9min",
+        minute:""
+    },
+    {
+        id:5,
+        image:"/selection6.jpg",
+        time:"5H 10min",
+        minute:""
+    },
+]
+---
+<section class="bg-white w-full min-h-10 py-5 relative z-50">
+    <h2 class="text-2xl font-bold py-2 text-center">Notre Sélection</h2>
+    <div class="w-[90%] mx-auto">
+        
+        <div class="w-full flex  flex-wrap gap-3 justify-center">
+            {
+                selections.map((selection)=>(
+                    <Selection image={selection.image} time={selection.time} />
+                ))
+            }
+
+        </div>
+        <div class="flex w-full py-6">
+            <button class="mx-auto border-2 font-bold border-blue rounded-md p-2 text-center text-blue hover:bg-blue hover:text-white">Parcourir tout le catalogue</button>
+
+        </div>
+        
+
+    </div>
+    
+</section>

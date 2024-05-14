@@ -1,0 +1,23 @@
+---
+interface Props {
+	
+	image: string;
+	
+}
+
+const { image } = Astro.props;
+
+---
+
+<div class="md:w-[40%] sm:w-[40%] lg:w-[30%] h-full bg-white shadow-md rounded-xl hover:shadow-lg">
+    <div>
+        <img src={image} alt="" class=" rounded-t-xl"/>
+    </div>
+    
+    <div class="bg-[#010126] flex flex-col space-y-2 p-2 items-start rounded-b-xl">
+        <p class="font-[500] text-white">Challenge : creer un tunel de vente en 3 trois</p>
+     
+        <button class=" sm:text-[10px] md:text-sm lg:text-sm rounded-full hover:bg-blue bg-red-600 text-white p-2 px-3">Voir l'enregistrement</button>
+    </div>
+   
+</div>
